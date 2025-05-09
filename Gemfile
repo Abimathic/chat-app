@@ -21,6 +21,9 @@ gem "jbuilder"
 
 #for Authentication purpose using devise
 gem 'devise'
+#use bootstrap
+gem "dartsass-rails"
+gem "bootstrap", "~> 5.3.3"
 
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
