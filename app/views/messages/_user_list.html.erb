@@ -1,0 +1,9 @@
+<h5>Users</h5>
+<% user_list = User.where.not(id: current_user.id) %>
+<ul class="list-group">
+  <% user_list.each do |user| %>
+    <li class="list-group-item">
+      <%= link_to user.name, new_message_path(user_id: user.id), class: "no" %>
+    </li>
+  <% end %>      
+</ul>
