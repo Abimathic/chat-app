@@ -1,4 +1,23 @@
-<div>
-  <h1 class="font-bold text-4xl">Messages#index</h1>
-  <p>Find me in app/views/messages/index.html.erb</p>
+<% if user_signed_in? %>
+<div class="container-fluid">
+  <div class="row vh-100">
+    <!-- User List Sidebar -->
+    <div class="col-md-3 border-end bg-light p-3">
+      <%= render 'user_list' %> <!-- Render the partial here -->
+      </ul>
+    </div>
+
+    <!-- Chat Area -->
+    <div class="col-md-9 d-flex flex-column">
+
+        <div class="d-flex justify-content-center align-items-center h-100 bg-light text-secondary" style="min-height: 400px; border-left: 1px solid #ddd;">
+        <div class="text-center">
+          <h2 class="display-6 text-primary">No Conversation Selected</h2>
+          <p class="lead no-conversation">Please select a user from the left to start chatting.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </div>
+<% end%>
