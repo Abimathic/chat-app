@@ -5,7 +5,7 @@
     <title><%= content_for(:title) || "Chat App" %></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag    'application', media: 'all'%>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag 'application' %>
   </head>
 
@@ -19,6 +19,9 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <% if user_signed_in? %>
+             <li class="nav-item">
+               <%= link_to "Edit Profile", edit_user_registration_path(user_id: current_user.id), class: "btn btn-info"%>!
+           </li>
               <li class="nav-item">
                 <span class="nav-link text-white">Welcome, <%= current_user.name%>!</span>
               </li>
