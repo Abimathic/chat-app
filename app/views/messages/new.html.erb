@@ -11,9 +11,11 @@
       <% if @chat_user %>
         <div class="d-flex flex-column p-3" style="background-color: #f9f9f9; border-left: 1px solid #ddd;">
           <!-- Chat Header -->
-          <div class="chat-header mb-4">
-            <h4><%= @chat_user.name %></h4>
+          <div class="chat-header mb-4 d-flex align-items-center">
+            <%= user_avatar(@chat_user) %>
+            <h4 class="mb-0"><%= @chat_user.name %></h4>
           </div>
+
 
           <!-- Display Messages -->
           <div class="messages-list mb-4" style="max-height: 400px; overflow-y: auto;">
