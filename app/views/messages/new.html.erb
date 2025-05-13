@@ -18,8 +18,15 @@
 
 
           <!-- Display Messages -->
+          <% previous_date = nil %>
+
           <div class="messages-list mb-4" style="max-height: 400px; overflow-y: auto;">
             <% @messages.each do |message| %>
+              
+              <% message_date = message.created_at.to_date %>
+              <%= display_message_date(message_date, previous_date) %>   <%# Display message date in message_helper %>
+              <% previous_date = message_date %>
+
               <% is_current_user = message.sender == current_user %>
               <div class="d-flex mb-2 <%= is_current_user ? 'justify-content-end' : 'justify-content-start' %>">
                 <div class="<%= is_current_user ? 'bg-secondary text-white' : 'bg-info text-black' %> p-2 fs-6 rounded" style="max-width: 70%;">
