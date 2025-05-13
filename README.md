@@ -1,24 +1,25 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A lightweight chat application built with Ruby on Rails 8, using Devise for authentication, Stimulus for frontend interactivity, and Bootstrap for styling. 
 
-Things you may want to cover:
+Users can sign up, log in, and send messages to other registered users in a clean, responsive interface.
 
-* Ruby version
+# Features
+- User authentication (Devise)
+- User-to-user messaging
+- Message timestamps and alignment (sender vs receiver)
+- Active Storage for image upload
+- StimulusJS for frontend activity
+- Bootstrap styling
 
-* System dependencies
+# Tech Stack
+  Ruby: 3.2.1
+  Rails: 8.0.2
+  Database: SQLite (for development)
+# Instructions
+  bundle install
+  bin/rails db:create db:migrate
+  bin/dev
 
-* Configuration
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+  
