@@ -42,7 +42,7 @@
   <div class="col-sm-3">
     <%= f.label :image %>
     <%= f.file_field :image, class: "form-control"%>
-    <% if resource.image.attached? %>
+    <% if resource.image.attached? && resource.image.blob.persisted? %>
       <span>Current Profile Image:</span>
       <%= image_tag resource.image, size: "100x100", class: "rounded-circle mb-3" %>
     <% else %>

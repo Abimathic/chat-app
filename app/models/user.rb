@@ -8,5 +8,7 @@ class User < ApplicationRecord
   has_many :received_messages, class_name: "Message", foreign_key: "receiver_id", dependent: :destroy
   #for image upload
   has_one_attached :image
+  validates :name, presence: true
+
 
 end
